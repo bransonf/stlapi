@@ -47,11 +47,14 @@ With valid datasets being:
 
 And valid endpoints being:
 ```
+/latest
 /coords
 /neighborhood
 /ward
 /detail
 ```
+
+`latest` accepts no query parameters, and will always return the date the data was last updated. This date reflects the date the API was updated, not neccessarily when the City updated its data.
 
 `coords` accepts the following query parameters:
 `start` - 
