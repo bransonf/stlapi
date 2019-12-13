@@ -1,4 +1,4 @@
-FROM rocker/geospatial:3.6.2
+FROM rocker/geospatial:3.6.1
 
 LABEL maintainer='Branson Fox <bransonf@wustl.edu>'
 
