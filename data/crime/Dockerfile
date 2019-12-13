@@ -6,8 +6,8 @@ LABEL maintainer='Branson Fox <bransonf@wustl.edu>'
 ARG pass=''
 
 # Install Dependencies
-
-# Probably need postgres...
+RUN apt-get update && apt-get install -y \\
+	libsodium-dev
 
 RUN R -e "install.packages(c('compstatr', 'DBI', 'RPostgres', 'sodium', 'cyphr', 'getPass'))"
 
