@@ -16,5 +16,7 @@ RUN mkdir /scripts
 COPY crime.R /scripts/
 COPY creds2.yml.encrypted /scripts/
 
+WORKDIR /scripts/
+
 # Execute
-CMD ["R", "-e", "source('/scripts/crime.R')"]
+CMD ["R", "-e", "source('crime.R')"]
