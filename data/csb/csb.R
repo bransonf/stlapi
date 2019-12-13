@@ -67,7 +67,7 @@ schema <- transmute(csb,
 # Check for Errors at this point and notify admin of any
 ## TODO
 
-# Connect to Database and Insert Data to Crime Table
+# Connect to Database and Insert Data to CSB Table
 library(DBI);library(RPostgres)
 source('https://bransonf.com/scripts/encryption.R')
 creds <- decrypt_yaml('creds2.yml.encrypted', Sys.getenv('pass'))
