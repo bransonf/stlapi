@@ -14,7 +14,7 @@ RUN R -e "install.packages(c('compstatr', 'DBI', 'RPostgres', 'sodium', 'cyphr',
 # Copy Script to Image
 RUN mkdir /scripts
 COPY crime.R /scripts/
-COPY ../../creds2.yml.encrypted /scripts/
+COPY creds2.yml.encrypted /scripts/
 
 # Execute
 CMD ["R", "-e", "source('/scripts/crime.R')"]
