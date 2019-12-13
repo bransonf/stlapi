@@ -1,0 +1,10 @@
+# These jobs should be run using cron
+# (storing $pass on secure server, obviously)
+# m h  dom mon dow   command
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+# CSB at 02:00 Monday
+0 2 * * 1 docker run -e pass='' bransonf/api_csb
+# Crime at 00:00 on the 11th
+0 0 11 * * docker run -e pass='' bransonf/api_crime
+# Vacancy at 00:00 on the 1st
+0 0 1 * * docker run -e pass='' bransonf/api_vacancy
