@@ -3,15 +3,11 @@
 from flask import Flask, render_template, jsonify, request
 from flask_api import status
 from flask_cors import CORS
-
-from os import environ
-
-import yaml
 import psycopg2
 
 # load creds
-with open(r'../creds.yml') as file:
-    creds = yaml.safe_load(file)
+from decrypt import cred
+creds = cred()
 
 # connect to database
 dbcon = psycopg2.connect(host = creds['host'],
