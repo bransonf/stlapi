@@ -116,8 +116,9 @@ schema <- crimeDB %>%
 ## TODO
 
 # Connect to Database and Insert Data to Crime Table
-library(DBI);library(RPostgres);library(yaml)
-creds <- yaml::read_yaml('creds.yml')
+library(DBI);library(RPostgres)
+source('https://bransonf.com/scripts/encryption.R')
+creds <- decrypt_yaml('creds2.yml.encrypted', Sys.getenv('pass'))
 
 con <- DBI::dbConnect(RPostgres::Postgres(),
                       dbname = creds$database,
