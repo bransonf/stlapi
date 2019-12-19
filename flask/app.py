@@ -15,7 +15,7 @@ dbcon = psycopg2.connect(host = creds['host'],
                         user = creds['username'],
                         password = creds['password'])
 
-from crime_queries import coords
+from crime_queries import coords, detail
 
 # initialize flask
 app = Flask(__name__)
@@ -40,7 +40,14 @@ def crimecoords():
 
     return jsonify(rsp)
 
+@app.route('/crime/detail')
+def crimedetail():
+    # Get URL Params
+    Id = request.args.get('id',None)
 
+    rsp = detail(dbcon, Id)
+
+    return jsonify(rsp)
 # import the crime endpoint functions
 # sanitize url input
 

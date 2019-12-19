@@ -51,13 +51,16 @@ def coords(con, start, end=None, category='all', proj='wgs', unfounded=False):
 # Get Details Based on ID of Crime
 def detail(con, id=None):
     cur = con.cursor()
-    cur.execute()
+
+    # Build and Execute Query
+    qry = 'SELECT * FROM crime WHERE "id" = ' + id
+    cur.execute(qry)
 
     q = cur.fetchall()
     cur.close()
     return(list(q))
 
-# Get Summary Based on Location/Date
+# Get Summary Based on Region/Date
 def summary(con, start, end, category, unfounded=False, neighborhood=None, district=None):
     cur = con.cursor()
     cur.execute()
