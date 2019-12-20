@@ -53,7 +53,7 @@ for (i in ls(pattern = '\\.shp$|\\.geojson$')) {
 # ~~~~~ Connect to Database and Insert ~~~~~ #
 library(RPostgres);library(rpostgis)
 source('https://bransonf.com/scripts/encryption.R')
-creds <- decrypt_yaml('data/geo/creds2.yml.encrypted', Sys.getenv('pass'))
+creds <- decrypt_yaml('creds2.yml.encrypted', Sys.getenv('pass'))
 
 con <- RPostgreSQL::dbConnect("PostgreSQL",
                       dbname = creds$database,
