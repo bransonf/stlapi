@@ -6,3 +6,4 @@
 .DS_Store
 creds.yml
 .vscode/
+pguri.cfg
