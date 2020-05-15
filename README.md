@@ -1,7 +1,8 @@
 # stlapi
 A REST API for Various St Louis Data
 
-PROJECT IS STILL IN DEVELOPMENT. Anticipated by End of 2019.
+PROJECT HAS BEEN DEPRECATED IN FAVOR OF A MORE COMPREHENSIVE EFFORT.
+Development is currently private, but set to release Summer 2020.
 
 ## Introduction
 This project aims to greatly advance the accessibility of the City of St. Louis's Open Data. To do that, I'm building a REST API that connects to a Postgres Database. What does that mean?
